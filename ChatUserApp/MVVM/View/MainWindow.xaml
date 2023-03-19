@@ -14,12 +14,19 @@
                 Command="{Binding connectToServerCommand}"/>
         <Button Content="Send" HorizontalAlignment="Left" Margin="466,349,0,0" VerticalAlignment="Top" Height="57" Width="94"/>
         <TextBox HorizontalAlignment="Left" Margin="182,349,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="57"/>
-        <ListView Margin="10,99,623,10">
-            <ListView.View>
+        <ListView Margin="10,99,623,10" ItemsSource="{Binding Users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding userName}"/>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            <!--<ListView.View>
+                
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
-            </ListView.View>
+            </ListView.View>-->
         </ListView>
         <TextBox HorizontalAlignment="Left" Margin="34,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding userName , UpdateSourceTrigger=PropertyChanged}"/>
 

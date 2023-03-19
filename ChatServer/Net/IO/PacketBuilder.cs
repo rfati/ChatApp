@@ -20,7 +20,7 @@ namespace ChatServer.Net.IO
             _ms.WriteByte(opcode);
         }
 
-        public void WriteString(string message)
+        public void WriteMessage(string message)
         {
             var messageLength = message.Length;
             _ms.Write(BitConverter.GetBytes(messageLength));
