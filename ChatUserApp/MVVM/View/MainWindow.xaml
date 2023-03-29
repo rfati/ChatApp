@@ -17,7 +17,7 @@
         <ListView Margin="10,99,623,10" ItemsSource="{Binding Users}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding userName}"/>
+                    <TextBlock Text="{Binding UserName}"/>
                 </DataTemplate>
                 
             </ListView.ItemTemplate>

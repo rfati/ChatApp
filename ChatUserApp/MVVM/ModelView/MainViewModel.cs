@@ -28,7 +28,7 @@ namespace ChatClient.MVVM.ModelView
         {
             var user = new UserModel()
             {
-                userName = _server._packetReader.ReadMessage(),
+                UserName = _server._packetReader.ReadMessage(),
                 UID = _server._packetReader.ReadMessage()
             };
 
